@@ -5,6 +5,9 @@ node_modules/
 src-tauri/target/
 src-tauri/gen/schemas/
 
+# Staged release uploads
+release-assets/
+
 # Environment & secrets
 .env
 .env.*

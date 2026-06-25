@@ -47,18 +47,28 @@ PPP turns that into a glance and a click.
 | **macOS** | ✅ Supported | `lsof -nP -iTCP -sTCP:LISTEN` + `ps` |
 | **Linux** | ✅ Supported | `lsof -nP -iTCP -sTCP:LISTEN` + `ps` |
 
-## Install
+## Install (Windows 10/11)
 
-Grab the latest installer from the [Releases](https://github.com/JasimSiddiqui/port-process-pal/releases) page.
+No terminal, no npm — just download and run. Grab a build from the
+[**Releases**](https://github.com/JasimSiddiqui/port-process-pal/releases/latest) page:
 
-- **Windows:** run the `.exe` installer. The app isn’t code-signed yet, so
-  Windows SmartScreen may warn you. Click **More info → Run anyway**.
-- **macOS:** open the `.dmg` and drag the app across. Because it isn’t notarized
-  yet, macOS may block the first launch — **right-click the app → Open**, then
-  confirm. (You only need to do this once.)
+| | What it does |
+| --- | --- |
+| **`…-setup.exe`** (recommended) | Double-click to install. Installs per-user (no admin prompt), drops a **Port Process Pal** shortcut on your desktop, and adds an uninstall entry to Add/Remove Programs. |
+| **`…-portable.exe`** | A single file — double-click to run. Nothing is installed. |
 
-> Code signing and notarization are planned; until then the workarounds above
-> are expected for any unsigned app.
+**First launch:** the app isn’t code-signed yet, so Windows SmartScreen shows
+*“Windows protected your PC.”* Click **More info → Run anyway**. You only see
+this once.
+
+> Windows 11 already ships the WebView2 runtime the app needs; on Windows 10 the
+> installer fetches it automatically if it’s missing.
+
+**macOS / Linux:** prebuilt downloads aren’t published yet — [build from
+source](#build-from-source) (it’s three commands).
+
+> Code signing and notarization are planned; until then the SmartScreen
+> workaround above is expected for any unsigned app.
 
 ## Build from source
 
