@@ -16,7 +16,7 @@ src-tauri/gen/schemas/
 Thumbs.db
 desktop.ini
 
-# Editor
+# Editor / tooling
 .vscode/
 .idea/
 *.swp
