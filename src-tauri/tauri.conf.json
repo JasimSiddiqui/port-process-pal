@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Port Process Pal",
+  "version": "1.0.0",
+  "identifier": "io.github.jasimsiddiqui.portprocesspal",
+  "build": {
+    "frontendDist": "../src"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "windows": [
+      {
+        "title": "Port Process Pal",
+        "width": 960,
+        "height": 700,
+        "minWidth": 660,
+        "minHeight": 480,
+        "resizable": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "category": "DeveloperTool",
+    "shortDescription": "List and kill the processes holding your local ports.",
+    "longDescription": "Port Process Pal lists every listening port on your machine, shows which process owns it and how long it has been running, and lets you open it in a browser, copy its URL, or terminate it — one at a time or all at once.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}
