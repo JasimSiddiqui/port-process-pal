@@ -3,6 +3,7 @@ name = "port-process-pal"
 version = "1.0.0"
 description = "List, inspect, and kill the processes holding your local ports."
 authors = ["Jasim Siddiqui"]
+license = "GPL-3.0-only"
 edition = "2021"
 
 [lib]

@@ -118,4 +118,9 @@ The result is a single window that starts instantly and weighs a few megabytes.
 
 ## License
 
-Released under the [MIT License](LICENSE).
+Copyright (C) 2026 Jasim Siddiqui.
+
+Port Process Pal is free software, released under the **GNU General Public
+License v3.0**. You may use, study, share, and modify it; if you distribute a
+modified version, that version must also be open source under the GPL. There is
+no warranty. See [LICENSE](LICENSE) for the full text.
