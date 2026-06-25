@@ -49,7 +49,10 @@ PPP turns that into a glance and a click.
 
 ## Install (Windows 10/11)
 
-No terminal, no npm. Just download and run. Grab a build from the
+**Download page: [portpal.vercel.app](https://portpal.vercel.app/)**
+
+No terminal, no npm. Just download and run. Grab a build from the download page
+above or straight from the
 [**Releases**](https://github.com/JasimSiddiqui/port-process-pal/releases/latest) page:
 
 | | What it does |
