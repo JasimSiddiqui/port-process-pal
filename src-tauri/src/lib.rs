@@ -28,6 +28,13 @@ fn open_in_browser(app: tauri::AppHandle, port: u16) -> Result<(), String> {
         .map_err(|e| format!("Could not open browser: {e}"))
 }
 
+#[tauri::command]
+fn open_url(app: tauri::AppHandle, url: String) -> Result<(), String> {
+    app.opener()
+        .open_url(url, None::<&str>)
+        .map_err(|e| format!("Could not open link: {e}"))
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -36,7 +43,8 @@ pub fn run() {
             list_ports,
             kill_process,
             kill_all,
-            open_in_browser
+            open_in_browser,
+            open_url
         ])
         .run(tauri::generate_context!())
         .expect("error while running Port Process Pal");

@@ -38,7 +38,10 @@ const el = {
   modalCount: document.getElementById("modal-count"),
   modalConfirm: document.getElementById("modal-confirm"),
   modalCancel: document.getElementById("modal-cancel"),
+  sourceLink: document.getElementById("source-link"),
 };
+
+const REPO_URL = "https://github.com/JasimSiddiqui/port-process-pal";
 
 // ----------------------------------------------------------------- helpers
 
@@ -460,6 +463,9 @@ el.search.addEventListener("input", () => {
 
 el.refresh.addEventListener("click", () => loadPorts());
 el.retry.addEventListener("click", retry);
+el.sourceLink.addEventListener("click", () => {
+  invoke("open_url", { url: REPO_URL }).catch(() => {});
+});
 
 el.stopAll.addEventListener("click", openStopAllModal);
 el.themeToggle.addEventListener("click", toggleTheme);
