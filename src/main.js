@@ -30,6 +30,7 @@ const el = {
   noMatch: document.getElementById("no-match"),
   error: document.getElementById("error"),
   errorMsg: document.getElementById("error-msg"),
+  retry: document.getElementById("retry"),
   autoState: document.getElementById("auto-state"),
   toasts: document.getElementById("toasts"),
   modal: document.getElementById("modal"),
@@ -126,12 +127,12 @@ async function loadPorts() {
   }
 }
 
-window.__ppp_retry = () => {
+function retry() {
   state.firstLoad = true;
   state.error = null;
   render();
   loadPorts();
-};
+}
 
 // ----------------------------------------------------------------- derive
 
@@ -427,12 +428,8 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  let theme = localStorage.getItem("ppp-theme");
-  if (!theme) {
-    theme = window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  }
+  // Light is the default; users opt into dark, and the choice is remembered.
+  const theme = localStorage.getItem("ppp-theme") || "light";
   applyTheme(theme);
 }
 
@@ -462,6 +459,7 @@ el.search.addEventListener("input", () => {
 });
 
 el.refresh.addEventListener("click", () => loadPorts());
+el.retry.addEventListener("click", retry);
 
 el.stopAll.addEventListener("click", openStopAllModal);
 el.themeToggle.addEventListener("click", toggleTheme);

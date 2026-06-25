@@ -11,10 +11,10 @@
     "windows": [
       {
         "title": "Port Process Pal",
-        "width": 960,
-        "height": 700,
-        "minWidth": 660,
-        "minHeight": 480,
+        "width": 1080,
+        "height": 720,
+        "minWidth": 700,
+        "minHeight": 460,
         "resizable": true,
         "center": true
       }
