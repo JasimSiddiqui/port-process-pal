@@ -1,5 +1,5 @@
 // ===========================================================================
-// Port Process Pal — frontend logic
+// Port Process Pal frontend logic
 // Talks to the Rust backend over Tauri's invoke bridge, keeps a gently-diffed
 // table in sync on a 2s poll, and guards destructive actions.
 // ===========================================================================
@@ -260,7 +260,7 @@ function rowInner(p) {
       <span class="row-actions">
         <button class="act act--open" data-act="open" data-port="${p.port}" title="Open http://localhost:${p.port}">Open</button>
         <button class="act act--copy" data-act="copy" data-port="${p.port}" title="Copy localhost URL">Copy</button>
-        <button class="act act--kill" data-act="kill" data-pid="${p.pid}" data-name="${escapeHtml(p.process_name)}" data-port="${p.port}" ${p.protected ? "disabled title='Protected — cannot be terminated'" : "title='Terminate this process'"}>Kill</button>
+        <button class="act act--kill" data-act="kill" data-pid="${p.pid}" data-name="${escapeHtml(p.process_name)}" data-port="${p.port}" ${p.protected ? "disabled title='Protected: cannot be terminated'" : "title='Terminate this process'"}>Kill</button>
       </span>
     </td>`;
 }

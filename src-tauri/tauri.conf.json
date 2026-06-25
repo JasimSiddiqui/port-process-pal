@@ -28,7 +28,7 @@
     "targets": ["nsis"],
     "category": "DeveloperTool",
     "shortDescription": "List and kill the processes holding your local ports.",
-    "longDescription": "Port Process Pal lists every listening port on your machine, shows which process owns it and how long it has been running, and lets you open it in a browser, copy its URL, or terminate it — one at a time or all at once.",
+    "longDescription": "Port Process Pal lists every listening port on your machine, shows which process owns it and how long it has been running, and lets you open it in a browser, copy its URL, or terminate it, one at a time or all at once.",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
